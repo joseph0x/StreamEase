@@ -1,0 +1,60 @@
+/*overlay styles*/
+.containerNewRelease {
+  position: relative;
+  width: 100%;
+}
+
+.newReleaseImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.containerNewRelease:hover .overlay {
+  opacity: 1;
+}
+
+.likeIcon {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.watchIcon {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.black {
+  background-color: #161616;
+}
+.white {
+  color: #fff;
+}
+
+.red {
+  color: red;
+}

@@ -1,0 +1,76 @@
+<div class="container-fluid px-5">
+  <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+      <li class="breadcrumb-item">
+        <a routerLink="/discover">Discover</a>
+      </li>
+      <li class="breadcrumb-item active">{{ movie.title }}</li>
+    </ol>
+  </nav>
+</div>
+<section class="container-fluid px-5 py-5">
+  <div class="row h-100">
+    <div class="col-md-4 col-sm-12">
+      <img
+        [src]="movie.logo"
+        alt=""
+        class="w-100 rounded-4"
+        style="height: 460px"
+      />
+    </div>
+    <div class="col-md-8 col-sm-12">
+      <div class="">
+        <h2 class="fw-bold">{{ movie.title }}</h2>
+        <p>{{ movie.year }} , {{ movie.duration }}</p>
+        <h6>{{ movie.genre }}</h6>
+        <h5 class="my-3">
+          {{ movie.description }}
+        </h5>
+
+        <p><b>Cast: </b>{{ movie.cast }}</p>
+        <p><b>Tags: </b>&nbsp;{{ movie.genre }}</p>
+        <p></p>
+      </div>
+      <div class="my-5">
+        <h4>Be the first to review {{ movie.title }}</h4>
+        <p>Your email will not be published</p>
+        <div>
+          Your rating
+          <div class="d-flex">
+            <span class="bi bi-star fs-6 me-2"></span>
+            <span class="bi bi-star fs-6 me-2"></span>
+            <span class="bi bi-star fs-6 me-2"></span>
+            <span class="bi bi-star fs-6 me-2"></span>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="reviewInput mt-3">
+                <label for="">Your review</label>
+                <input type="text" class="form-control" style="height: 50px" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="nameInput">
+                <label for="">Name</label>
+                <input type="text" class="form-control" height="50" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="emailInput">
+                <label for="">Email</label>
+                <input type="email" class="form-control" height="50" />
+              </div>
+              <input
+                type="submit"
+                value="Send"
+                class="float-end my-3 border-0"
+                style="color: #fff; background-color: #e50916"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

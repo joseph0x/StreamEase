@@ -1,0 +1,65 @@
+<div class="cont-overlay px-5">
+  <div class="filter-bar-content-type-new">
+    <div class="filter-bar-content-type__item active">
+      <a href="#" class="router-link-active"> TV Shows </a>
+    </div>
+
+    <div class="filter-bar-content-type__item active">
+      <a href="#" class="router-link-active"> Movies </a>
+    </div>
+  </div>
+
+  <!----WATCHLIST-NAV-->
+  <div class="watchlist-filterbar" activecontenttype="SHOW">
+    <div class="filter-bar-with-icon">
+      <!-- <a class="button active" href="">
+        <i class="bi bi-bookmark-fill"></i> Up next
+      </a> -->
+
+      <a class="button" href="">
+        <i class="bi bi-hand-thumbs-up-fill"></i> Likes
+      </a>
+      <button
+        class="btn button"
+        (click)="emptyWatchlater()"
+        style="color: black"
+      >
+        Delete All
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <!---WATCHLIST SHOULD DISPLAY-->
+    <div
+      class="card mb-3"
+      style="max-width: 540px; margin-top: 10px"
+      *ngFor="let movie of theMovies; let i = index"
+    >
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img
+            [src]="movie.logo"
+            class="img-fluid rounded-start h-100"
+            alt="1"
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body w-100">
+            <h5 class="card-title">{{ movie.title }}</h5>
+            <p class="card-text">
+              {{ movie.description }}
+            </p>
+            <p class="card-text" id="Text-watch">
+              <i class="bi bi-play-fill"></i>
+              <a href=""> Watch Now </a>
+            </p>
+            <button class="btn button red" (click)="removeMovie(movie)">
+              <i class="bi bi-trash fs-4 red"></i> Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,186 @@
+<!--Discover header -->
+<section class="container-fluid px-5">
+  <div class="row" style="margin-top: 16px">
+    <div class="col-md-6">
+      <h1 class="">
+        Discover daily
+        <img
+          src="assets/images/calendar.png"
+          alt=""
+          class=""
+          style="width: 50px; height: 50px; border-radius: 20%"
+        />
+      </h1>
+    </div>
+    <div class="col-md-6">
+      <ul
+        class="list-unstyled d-flex align-items-center float-lg-end float-md-end"
+      >
+        <li class="me-2" (click)="filterStreamProvider('Netflix')">
+          <img
+            src="assets/images/netflix.png"
+            alt=""
+            style="border-radius: 20%; height: 50px; width: 50px"
+          />
+        </li>
+        <li class="me-2" (click)="filterStreamProvider('HBO')">
+          <img
+            src="assets/images/hbo.png"
+            alt=""
+            style="border-radius: 20%; height: 50px; width: 50px"
+          />
+        </li>
+        <li class="me-2" (click)="filterStreamProvider('Amazon')">
+          <img
+            src="assets/images/amznprime.webp"
+            alt=""
+            style="border-radius: 20%; height: 50px; width: 50px"
+          />
+        </li>
+        <li class="me-2" (click)="filterStreamProvider('Hulu')">
+          <img
+            src="assets/images/hulu.png"
+            alt=""
+            style="border-radius: 20%; height: 50px; width: 50px"
+          />
+        </li>
+        <li class="me-2" (click)="filterStreamProvider('Showmax')">
+          <img
+            src="assets/images/showmax.webp"
+            alt=""
+            style="border-radius: 20%; height: 50px; width: 50px"
+          />
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!--grid discoverpage-->
+<section class="container-fluid mx-auto px-5">
+  <div class="row">
+    <div class="col-md-3 my-4 h-100">
+      <form class="d-flex align-items-center" role="search" id="headerSearch">
+        <input
+          class="form-control"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          [(ngModel)]="searchTerm"
+          (keyup)="search($event)"
+        />
+        <!-- <button class="btn" type="submit">
+          <span class="bi bi-search"></span>
+        </button> -->
+      </form>
+      <div class="p-2">
+        <!-- <a href="" class="my-3 text-decoration-none smokyBlack"> -->
+        <span class="fs-3 red">Category</span>
+
+        <div class="d-flex">
+          <button
+            class="btn white"
+            style="background-color: #e50916"
+            (click)="filterYear('')"
+          >
+            All
+          </button>
+          <button
+            class="btn btn-md ms-3 white"
+            (click)="sortDataAlphabetically()"
+            style="background-color: #e50916"
+          >
+            Order by name
+          </button>
+        </div>
+        <hr />
+        <ul class="list-unstyled mb-auto smokyBlack">
+          <p class="fs-4">Genre</p>
+          <li class="my-2">
+            <button class="btn" (click)="filterGenre('Action')">Action</button>
+          </li>
+          <li class="my-2">
+            <button class="btn" (click)="filterGenre('Adventure')">
+              Adventure
+            </button>
+          </li>
+          <li class="my-2">
+            <button class="btn" (click)="filterGenre('Thriller')">
+              Thriller
+            </button>
+          </li>
+          <li class="my-2">
+            <button class="btn" (click)="filterGenre('Comedy')">Comedy</button>
+          </li>
+          <li class="my-2">
+            <button class="btn" (click)="filterGenre('Romance')">
+              Romance
+            </button>
+          </li>
+          <li class="my-2">
+            <button class="btn" (click)="filterGenre('Documentary')">
+              Documentary
+            </button>
+          </li>
+        </ul>
+        <ul class="list-unstyled mb-auto smokyBlack">
+          <p class="fs-4">Release year</p>
+          <li class="my-2">
+            <button class="btn" (click)="filterYear('2023')">2023</button>
+          </li>
+          <li class="my-2">
+            <button class="btn" (click)="filterYear('2022')">2022</button>
+          </li>
+          <li class="my-2">
+            <button class="btn" (click)="filterYear('2021')">2021</button>
+          </li>
+          <li class="my-2">
+            <button class="btn" (click)="filterYear('2020')">2020</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-9 my-4">
+      <div class="row" id="cardGrid">
+        <div
+          class="col-md-3 col-sm-6 p-2 g-0 justify-content-center"
+          *ngFor="let movie of filterMovieType; let i = index"
+        >
+          <div class="card border-0 rounded-0" id="trendingMovies">
+            <div class="containerNewRelease">
+              <img
+                [src]="movie.logo"
+                class="card-img-top rounded-3 w-100"
+                style="height: 18rem"
+                alt="..."
+              />
+              <div class="overlay rounded-3">
+                <div class="">
+                  <a
+                    class="watchIcon"
+                    title="Watch later"
+                    (click)="addToWatch(movie)"
+                  >
+                    <i class="bi bi-bookmark"></i>
+                  </a>
+                  <a class="likeIcon" title="Like" (click)="addToWatch(movie)">
+                    <i class="bi bi-hand-thumbs-up"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <a
+                [routerLink]="['/description', i]"
+                class="text-decoration-none"
+                style="color: black"
+              >
+                <h5 class="card-title mt-1">{{ movie.title }}</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div></div>
+</section>

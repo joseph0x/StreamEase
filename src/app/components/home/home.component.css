@@ -1,0 +1,156 @@
+:root {
+  --main-color: #e50914;
+}
+
+h1 {
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+h1:hover {
+  color: var(--main-color);
+}
+
+span {
+  color: var(--main-color);
+}
+
+.info {
+  color: #fff;
+}
+
+p {
+  color: var(--main-color);
+}
+
+.purple {
+  color: var(--main-color);
+}
+
+.para {
+  color: #fff;
+}
+
+.head-content {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: flex;
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  background: var(--main-color);
+  border-radius: 0.7rem;
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  margin-right: 30px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.btn:hover {
+  color: var(--main-color);
+  background: #fff;
+  box-shadow: 3px 3px var(--main-color);
+}
+
+.btn-watch {
+  justify-content: center;
+  display: flex;
+  margin-left: 20px;
+  bottom: 200;
+  margin-top: 1rem;
+  display: inline-block;
+  font-size: 1rem;
+  color: #fff;
+  background: var(--main-color);
+  border-radius: 0.7rem;
+  cursor: pointer;
+  padding: 0.5rem 3rem;
+  cursor: pointer;
+}
+
+.btn-watch:hover {
+  color: var(--main-color);
+  background: #fff;
+  box-shadow: 3px 3px var(--main-color);
+}
+
+.ls-sm {
+  letter-spacing: 0.75px;
+}
+.single-feature {
+  border-radius: 10px;
+  background-color: rgb(249, 249, 255);
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease 0s;
+}
+section #serviceCards:hover {
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+}
+/*overlay styles*/
+.containerNewRelease {
+  position: relative;
+  width: 100%;
+}
+
+.newReleaseImg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.containerNewRelease:hover .overlay {
+  opacity: 1;
+}
+
+.likeIcon {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.watchIcon {
+  color: white;
+  font-size: 35px;
+  position: absolute;
+  top: 10%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.black {
+  background-color: #161616;
+}
+.white {
+  color: #fff;
+}
+
+.red {
+  color: red;
+}

@@ -1,0 +1,35 @@
+.black {
+  background-color: #161616;
+}
+.white {
+  color: #fff;
+}
+
+.red {
+  color: red;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  color: #ccc; /* Default star color */
+  transition: color 0.3s ease; /* Add smooth transition */
+}
+
+span:hover {
+  color: gold; /* Change color on hover */
+}
+
+.black {
+  background-color: #161616;
+}
+.white {
+  color: #fff;
+}
+
+.red {
+  color: #e50916;
+}

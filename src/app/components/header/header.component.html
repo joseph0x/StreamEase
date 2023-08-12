@@ -1,0 +1,66 @@
+<nav class="navbar navbar-expand-lg black sticky-top">
+  <div class="container-fluid align-items-center">
+    <a
+      class="navbar-brand d-flex justify-content-center align-items-center white"
+      href="#"
+    >
+      <img src="assets/img/stream_easenobg.png" alt="" width="52" height="50" />
+      <span class=""> StreamEase.</span>
+    </a>
+
+    <div class="btn-group">
+      <ng-container>
+        <button class="btn btn-sm border-0 shadow-none" id="smallScreenSignIn">
+          <span class="bi bi-person fs-1"></span>
+        </button>
+      </ng-container>
+      <button
+        class="navbar-toggler border-0 shadow-none float-end"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        (click)="toggleMenu()"
+      >
+        <span
+          class="bi fs-1"
+          [ngClass]="{ 'bi-list': !menuToggle(), 'bi-x-lg': menuToggle() }"
+        ></span>
+      </button>
+    </div>
+    <div
+      class="collapse navbar-collapse justify-content-center white"
+      id="navbarSupportedContent"
+    >
+      <ul class="navbar-nav justify-content-center white">
+        <li class="nav-item">
+          <a class="nav-link white" aria-current="page" routerLinkActive="/"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link white" routerLink="/discover">Discover</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link white" routerLink="/watchlist">Watchlist</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link white" routerLink="/feedback">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link white" routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item"></li>
+      </ul>
+    </div>
+    <button
+      class="btn btn-sm border-0 mx-3"
+      id="largeScreenSignIn"
+      routerLink="/login"
+    >
+      <span class="bi bi-person fs-2 white"></span>
+    </button>
+  </div>
+</nav>

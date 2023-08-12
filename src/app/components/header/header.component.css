@@ -1,0 +1,30 @@
+@media screen and (min-width: 996px) {
+  #smallScreenSignIn {
+    display: none;
+  }
+}
+@media screen and (max-width: 995px) {
+  #largeScreenSignIn {
+    display: none;
+  }
+}
+.form-control:focus {
+  border-color: none;
+  /* box-shadow: 0 0 0 0.2rem rgba(241, 133, 70, 0.25); */
+  box-shadow: none;
+}
+
+.black {
+  background-color: #161616;
+}
+.white {
+  color: #fff;
+}
+
+.red {
+  color: red;
+}
+
+a:hover {
+  color: gray;
+}
